@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+body {
+  background-image: url(../img/Bg-Leorioliknight.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 20px 10px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+
+  & img:first-child {
+    width: 104px;
+    max-width: 100%;
+  }
+
+  & img:last-child {
+    width: 842.54px;
+    max-width: 100%;
+  }
+
+  & h1 {
+    text-align: center;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  
+  & #eu {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    max-width: 30%;
+    height: auto;
+  }
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+  max-width: 586px;
+  margin-top: 20px;
+  border: #ffffff30 0.5px solid;
+  border-radius: 12px;
+  background: #00000074;
+  backdrop-filter: blur(6.7px);
+  padding: 16px;
+
+  & h2 {
+    text-align: center;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+  }
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+
+    & .Frame, & .frame {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+
+      & #text-area {
+        width: 100%;
+      }
+
+      & .input-user {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        gap: 8px;
+
+        & input,
+        textarea {
+          padding: 11px 16px;
+          background: transparent;
+          color: #fff;
+          border: #cacaca 1px solid;
+          border-radius: 8px;
+          outline: none;
+          font-size: 16px;
+          width: 100%;
+        }
+
+        & textarea {
+          width: 100%;
+          resize: none;
+          min-height: 80px;
+        }
+
+        & input:disabled,
+        textarea:disabled {
+          opacity: 0.5;
+        }
+
+        & input::placeholder,
+        textarea::placeholder {
+          color: rgba(255, 255, 255, 0.5); 
+        }
+      }
+    }
+
+    & input[type="button"] {
+      background: #ff6200;
+      padding: 11px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 100%;
+      max-width: 269px;
+      margin: auto;
+      margin-top: 32px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    & input[type="button"]:hover {
+      background: #ff7d33;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container form .Frame, .container form .frame {
+    flex-direction: column;
+    
+    & .input-user {
+      width: 100%;
+    }
+  }
+
+  header img:last-child {
+    display: none; 
+  }
+}
+
+
+@media (hover: none) {
+  input:focus, textarea:focus {
+    border-color: #ff6200;
+  }
+}

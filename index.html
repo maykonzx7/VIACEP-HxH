@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Via Cep HxH</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <header>
+            <img src="img/Lg-HxH.png" alt="Logo-HxH">
+            <h1>Searches with the Hunters</h1>
+            <img src="img/" alt>
+        </header>
+        <main>
+            <div class="container">
+                <h2>Address</h2>
+                <form>
+                    <div class="Frame">
+                        <div class="input-user">
+                            <label for="cep">CEP</label>
+                            <input id="cep" type="text"
+                                placeholder="Enter your CEP" maxlength="9">
+                        </div>
+                        <div class="input-user">
+                            <label for="estado">Estado</label>
+                            <input id="estado" type="text"
+                                placeholder="Enter your state" disabled>
+                        </div>
+                    </div>
+                    <div class="Frame">
+                        <div class="input-user">
+                            <label for="city">Cidade</label>
+                            <input id="city" type="text"
+                                placeholder="Enter your city" disabled>
+                        </div>
+                        <div class="input-user">
+                            <label for="neighborhood">Bairro</label>
+                            <input id="neighborhood" type="text"
+                                placeholder="Enter your neighborhood" disabled>
+                        </div>
+                    </div>
+                    <div class="Frame">
+                        <div class="input-user">
+                            <label for="streetAddress">Logradouro</label>
+                            <input id="streetAddress" type="text"
+                                placeholder="Enter your street address" disabled>
+                        </div>
+                        <div class="input-user">
+                            <label for="number">Numero</label>
+                            <input id="number" type="text"
+                                placeholder="Enter number" disabled>
+                        </div>
+                    </div>
+                    <div class="Frame">
+                        <div class="input-user" id="text-area">
+                            <label for="complement">Complemento</label>
+                            <textarea id="complement"
+                                placeholder="Ex. Apartamento 402, Bloco Zoldyck, próximo à sede da Associação Hunter" disabled></textarea>
+                        </div>
+                    </div>
+                    <input id="button-shearch" type="button" value="Search">
+                </form>         
+            </div>
+        </main>
+        <script src="js/script.js"></script>
+    </body>
+</html>
